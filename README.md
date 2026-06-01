@@ -17,7 +17,7 @@ Go to the [Releases](https://github.com/haerin99/Pomochick/releases) page to dow
 - Sound effects when a pomodoro or break ends
 
 ### 🐥 Pixel Art Chick
-- 3 states: happy, neutral, and sad
+- 3 states: happy, neutral, and sad <br>
 <img src="assets/happy_chick.png" width="60"> <img src="assets/neutral_chick.png" width="60"> <img src="assets/sad_chick.png" width="60">
 - Completing a pomodoro feeds the chick
 - Hunger increases daily based on your goals:
