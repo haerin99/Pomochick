@@ -33,6 +33,7 @@ Go to the [Releases](https://github.com/haerin99/Pomochick/releases) page to dow
 <img width="396" height="455" alt="Screenshot 2026-06-01 at 12 47 29 AM" src="https://github.com/user-attachments/assets/8d172157-b75c-4185-ba41-fee669ac7766" />
 <img width="394" height="373" alt="Screenshot 2026-06-01 at 12 47 39 AM" src="https://github.com/user-attachments/assets/cc82a971-391c-42fc-ac49-8bf7e5e667f1" />
 
+<br>
 <img width="201" height="200" alt="sad_chick" src="https://github.com/user-attachments/assets/c8f6df0d-3718-428e-bba9-8b89b7731b48" />
 <img width="213" height="213" alt="happy_chick" src="https://github.com/user-attachments/assets/b3182eb8-c285-495c-b5e4-8c68f2ad1311" />
 
