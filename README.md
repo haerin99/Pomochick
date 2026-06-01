@@ -15,13 +15,15 @@ Go to the [Releases](https://github.com/haerin99/Pomochick/releases) page to dow
 - Pomodoro timer (customizable in settings)
   - Sound effects when pomoodoro or break ends
 - Pixel art chick reacts to your progress
+  - 3 states: happy, neutral, sad
   - Completing a pomodoro feeds the chick
   - Hunger increases daily ("POMOS/SESSION" * "HUNGER -/POMO" * "SESSIONS/DAY" / 2)
+  - When hunger reaches 100, the chick will die
 - Minimal and cute UI
 - Stats
 - Settings
   - Pomodoro and break lengths
-  - Pause hunger
+  - Pause hunger (stops it from increasing)
   - Reset chick status & stats
 
 <img width="394" height="456" alt="Screenshot 2026-06-01 at 12 41 05 AM" src="https://github.com/user-attachments/assets/1d507916-5fd1-496e-9d1f-eaf3068e252b" />
@@ -30,6 +32,10 @@ Go to the [Releases](https://github.com/haerin99/Pomochick/releases) page to dow
 
 <img width="396" height="455" alt="Screenshot 2026-06-01 at 12 47 29 AM" src="https://github.com/user-attachments/assets/8d172157-b75c-4185-ba41-fee669ac7766" />
 <img width="394" height="373" alt="Screenshot 2026-06-01 at 12 47 39 AM" src="https://github.com/user-attachments/assets/cc82a971-391c-42fc-ac49-8bf7e5e667f1" />
+
+<img width="402" height="400" alt="sad_chick" src="https://github.com/user-attachments/assets/c8f6df0d-3718-428e-bba9-8b89b7731b48" />
+<img width="426" height="426" alt="happy_chick" src="https://github.com/user-attachments/assets/b3182eb8-c285-495c-b5e4-8c68f2ad1311" />
+
 
 
 ## Development
