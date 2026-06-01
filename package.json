@@ -1,0 +1,31 @@
+{
+  "name": "pomochick",
+  "version": "1.0.0",
+  "description": "Pomodoro timer with pixel art chick",
+  "license": "MIT",
+  "author": "Hae Rin Kim",
+  "type": "commonjs",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "devDependencies": {
+    "electron": "^42.3.0",
+    "electron-builder": "^26.8.1"
+  },
+  "build": {
+    "appId": "com.haerin.pomochick",
+    "productName": "Pomochick",
+    "mac": {
+      "icon": "assets/icons/icon.icns"
+    },
+    "win": {
+      "icon": "assets/icons/icon.ico",
+      "target": "nsis"
+    },
+    "linux": {
+      "icon": "assets/icons/icon.png"
+    }
+  }
+}

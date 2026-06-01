@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>POMOCHICK</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app">
+    <!-- TITLE BAR -->
+    <div id="title-bar">
+
+    </div>
+
+    <!-- MAIN WRAPPER -->
+    <div id="main-wrapper">
+
+      <!-- === TIMER SCREEN === -->
+      <div id="screen-timer" class="screen active">
+        <div class="app-frame">
+          <!-- Header -->
+          <div class="header">
+            <div class="header-logo">
+              <img src="assets/logo_egg.svg" alt="egg" class="logo-icon">
+              <span class="logo-text">POMOCHICK</span>
+            </div>
+            <div class="header-icons">
+              <button class="icon-btn active-icon" id="nav-timer" title="Timer">
+                <img src="assets/icon_timer.svg" alt="timer">
+              </button>
+              <button class="icon-btn" id="nav-stats" title="Stats">
+                <img src="assets/icon_stats.svg" alt="stats">
+              </button>
+              <button class="icon-btn" id="nav-settings" title="Settings">
+                <img src="assets/icon_settings.svg" alt="settings">
+              </button>
+            </div>
+          </div>
+
+          <!-- Main area -->
+          <div class="main-area">
+            <!-- Hunger bar + status -->
+            <div class="top-controls">
+              <div class="hunger-group" id="hunger-group" style="visibility:hidden">
+                <div class="hunger-label">HUNGER</div>
+                <div class="hunger-bar-bg">
+                  <div class="hunger-bar-fill" id="hunger-fill"></div>
+                </div>
+              </div>
+              <div class="status-badge" id="status-badge" style="visibility:hidden">
+                <span id="status-text">STATUS: HAPPY</span>
+              </div>
+            </div>
+
+            <!-- Chick -->
+            <div class="chick-container" id="chick-container" style="visibility:hidden">
+              <img id="chick-img" src="assets/sad_chick.png" alt="chick">
+            </div>
+
+            <!-- Bottom controls -->
+            <div class="bottom-controls">
+              <button class="play-btn" id="play-btn">
+                <img src="assets/play_icon.svg" alt="play/pause" id="play-icon">
+              </button>
+              <div class="timer-display">
+                <span id="timer-text">25:00</span>
+              </div>
+            </div>
+
+            <!-- Session info -->
+            <div class="session-info" id="session-info">
+              <span id="phase-label">POMODORO 1/4</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- === STATS SCREEN === -->
+      <div id="screen-stats" class="screen">
+        <div class="app-frame">
+          <div class="header">
+            <div class="header-logo">
+              <img src="assets/logo_egg.svg" alt="egg" class="logo-icon">
+              <span class="logo-text">POMOCHICK</span>
+            </div>
+            <div class="header-icons">
+              <button class="icon-btn" id="nav-timer-2" title="Timer">
+                <img src="assets/icon_timer.svg" alt="timer">
+              </button>
+              <button class="icon-btn active-icon" id="nav-stats-2" title="Stats">
+                <img src="assets/icon_stats.svg" alt="stats">
+              </button>
+              <button class="icon-btn" id="nav-settings-2" title="Settings">
+                <img src="assets/icon_settings.svg" alt="settings">
+              </button>
+            </div>
+          </div>
+          <div class="stats-content">
+            <div class="stats-days-alive-card">
+              <span id="stats-days-alive">0 DAYS ALIVE</span>
+            </div>
+            <div class="stats-total-card">
+              <div class="stats-card-label">TOTAL FOCUS TIME</div>
+              <div class="stats-time-display">
+                <span id="stats-hours">0</span><span class="stats-unit">h</span>
+                <span id="stats-minutes">0</span><span class="stats-unit">m</span>
+              </div>
+              <div class="stats-pomo-count">
+                <span id="stats-pomos">0 POMODOROS COMPLETED</span>
+              </div>
+            </div>
+            <div class="chart-card">
+              <div class="chart-header">
+                <div class="chart-title">WEEKLY ACTIVITY</div>
+                <div class="chart-subtitle">Focus blocks per day</div>
+              </div>
+              <div class="chart-area" id="chart-area">
+                <!-- Generated by JS -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- === SETTINGS SCREEN === -->
+      <div id="screen-settings" class="screen">
+        <div class="app-frame settings-frame">
+          <div class="header">
+            <div class="header-logo">
+              <img src="assets/logo_egg.svg" alt="egg" class="logo-icon">
+              <span class="logo-text">POMOCHICK</span>
+            </div>
+            <div class="header-icons">
+              <button class="icon-btn" id="nav-timer-3" title="Timer">
+                <img src="assets/icon_timer.svg" alt="timer">
+              </button>
+              <button class="icon-btn" id="nav-stats-3" title="Stats">
+                <img src="assets/icon_stats.svg" alt="stats">
+              </button>
+              <button class="icon-btn active-icon" id="nav-settings-3" title="Settings">
+                <img src="assets/icon_settings.svg" alt="settings">
+              </button>
+            </div>
+          </div>
+
+          <div class="settings-scroll">
+            <div class="settings-section-title">TIMER SETTINGS</div>
+
+            <div class="setting-row">
+              <div class="setting-label">Pomodoro</div>
+              <div class="setting-control">
+                <button class="stepper-btn" onclick="adjustSetting('pomoDuration', -1)">−</button>
+                <div class="stepper-val" id="val-pomoDuration">25</div>
+                <button class="stepper-btn" onclick="adjustSetting('pomoDuration', 1)">+</button>
+                <span class="setting-unit">min</span>
+              </div>
+            </div>
+
+            <div class="setting-row">
+              <div class="setting-label">Short Break</div>
+              <div class="setting-control">
+                <button class="stepper-btn" onclick="adjustSetting('shortBreak', -1)">−</button>
+                <div class="stepper-val" id="val-shortBreak">5</div>
+                <button class="stepper-btn" onclick="adjustSetting('shortBreak', 1)">+</button>
+                <span class="setting-unit">min</span>
+              </div>
+            </div>
+
+            <div class="setting-row">
+              <div class="setting-label">Long Break</div>
+              <div class="setting-control">
+                <button class="stepper-btn" onclick="adjustSetting('longBreak', -1)">−</button>
+                <div class="stepper-val" id="val-longBreak">15</div>
+                <button class="stepper-btn" onclick="adjustSetting('longBreak', 1)">+</button>
+                <span class="setting-unit">min</span>
+              </div>
+            </div>
+
+            <div class="setting-row">
+              <div class="setting-label">Pomos/Session</div>
+              <div class="setting-control">
+                <button class="stepper-btn" onclick="adjustSetting('pomosPerSession', -1)">−</button>
+                <div class="stepper-val" id="val-pomosPerSession">4</div>
+                <button class="stepper-btn" onclick="adjustSetting('pomosPerSession', 1)">+</button>
+                <span class="setting-unit">×</span>
+              </div>
+            </div>
+
+            <div class="settings-divider"></div>
+            <div class="settings-section-title">CHICK SETTINGS</div>
+
+            <div class="setting-row">
+              <div class="setting-label">Hunger −/pomo</div>
+              <div class="setting-control">
+                <button class="stepper-btn" onclick="adjustSetting('hungerDecrease', -1)">−</button>
+                <div class="stepper-val" id="val-hungerDecrease">10</div>
+                <button class="stepper-btn" onclick="adjustSetting('hungerDecrease', 1)">+</button>
+                <span class="setting-unit">pts</span>
+              </div>
+            </div>
+
+            <div class="setting-row">
+              <div class="setting-label">Sessions/Day</div>
+              <div class="setting-control">
+                <button class="stepper-btn" onclick="adjustSetting('sessionsPerDay', -1)">−</button>
+                <div class="stepper-val" id="val-sessionsPerDay">2</div>
+                <button class="stepper-btn" onclick="adjustSetting('sessionsPerDay', 1)">+</button>
+                <span class="setting-unit">×</span>
+              </div>
+            </div>
+
+            <button class="reset-btn" id="hunger-pause-btn" style="margin-top: 6px;">PAUSE HUNGER</button>
+
+            <button class="save-btn" id="save-settings-btn">SAVE</button>
+
+            <div class="settings-divider" style="margin-top: 10px;"></div>
+            <div class="settings-section-title" style="color: var(--red); opacity: 0.8;">DANGER ZONE</div>
+            <button class="reset-btn" id="reset-chick-btn">RESET CHICK</button>
+            <button class="reset-btn" id="clear-stats-btn">CLEAR STATS</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- RESET CONFIRM MODAL -->
+      <div id="reset-modal" class="modal-overlay">
+        <div class="modal-box">
+          <div class="modal-title">RESET CHICK?</div>
+          <div class="modal-body">Hunger will return to 50 and your chick will be neutral.</div>
+          <div class="modal-actions">
+            <button class="modal-btn modal-cancel" id="modal-cancel">CANCEL</button>
+            <button class="modal-btn modal-confirm" id="modal-confirm">RESET</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- CLEAR STATS CONFIRM MODAL -->
+      <div id="clear-stats-modal" class="modal-overlay">
+        <div class="modal-box">
+          <div class="modal-title">CLEAR STATS?</div>
+          <div class="modal-body">All focus time and weekly activity will be permanently deleted.</div>
+          <div class="modal-actions">
+            <button class="modal-btn modal-cancel" id="clear-stats-cancel">CANCEL</button>
+            <button class="modal-btn modal-confirm" id="clear-stats-confirm">CLEAR</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="renderer.js"></script>
+</body>
+</html>
