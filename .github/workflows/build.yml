@@ -42,3 +42,20 @@ jobs:
         with:
           name: pomochick-mac
           path: dist/*.dmg
+
+  build-linux:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18
+      - name: Install dependencies
+        run: npm install
+      - name: Build Linux
+        run: npm run build -- --linux --publish never
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: pomochick-linux
+          path: dist/*.AppImage
