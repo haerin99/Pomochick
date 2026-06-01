@@ -12,32 +12,37 @@ Go to the [Releases](https://github.com/haerin99/Pomochick/releases) page to dow
 
 ## Features
 
-- Pomodoro timer (customizable in settings)
-  - Sound effects when pomoodoro or break ends
-- Pixel art chick reacts to your progress
-  - 3 states: happy, neutral, sad
-  - Completing a pomodoro feeds the chick
-  - Hunger increases daily ("POMOS/SESSION" * "HUNGER -/POMO" * "SESSIONS/DAY" / 2)
-  - When hunger reaches 100, the chick will die. (You can prevent this with "PAUSE HUNGER" in settings, or restart with "RESET CHICK").
-- Minimal and cute UI
-- Stats
-- Settings
-  - Pomodoro and break lengths
-  - Pause hunger (stops the daily increase)
-  - Reset chick status & stats
+### 🍅 Pomodoro Timer
+- Customizable pomodoro and break lengths
+- Sound effects when a pomodoro or break ends
 
-<img width="394" height="456" alt="Screenshot 2026-06-01 at 12 41 05 AM" src="https://github.com/user-attachments/assets/1d507916-5fd1-496e-9d1f-eaf3068e252b" />
+### 🐥 Pixel Art Chick
+- 3 states: happy, neutral, and sad
+![happy](assets/happy_chick.png)
+![neutral](assets/neutral_chick.png)
+![sad](assets/sad_chick.png)
+- Completing a pomodoro feeds the chick
+- Hunger increases daily based on your goals:
+  `(HUNGER/POMO × POMOS/SESSION × SESSIONS/DAY) / 2`
+  Complete at least half your planned sessions each day to keep the chick fed
+- When hunger reaches 100, the chick dies — use **Pause Hunger** to prevent this, or **Reset Chick** to start over
+![sad](assets/dead_chick.png)
 
-<img width="391" height="454" alt="Screenshot 2026-06-01 at 12 45 48 AM" src="https://github.com/user-attachments/assets/d70442d8-ffa7-433d-9757-059b4ab026a6" />
+### 📊 Stats
+- Days alive, total focus time, and weekly activity
 
-<img width="396" height="455" alt="Screenshot 2026-06-01 at 12 47 29 AM" src="https://github.com/user-attachments/assets/8d172157-b75c-4185-ba41-fee669ac7766" />
-<img width="394" height="373" alt="Screenshot 2026-06-01 at 12 47 39 AM" src="https://github.com/user-attachments/assets/cc82a971-391c-42fc-ac49-8bf7e5e667f1" />
+### ⚙️ Settings
+- Pomodoro and break lengths
+- Hunger per pomo, pomos per session, sessions per day
+- Pause hunger (stops the daily increase)
+- Reset chick status & stats
 
-<br>
-<img width="201" height="200" alt="sad_chick" src="https://github.com/user-attachments/assets/c8f6df0d-3718-428e-bba9-8b89b7731b48" />
-<img width="213" height="213" alt="happy_chick" src="https://github.com/user-attachments/assets/b3182eb8-c285-495c-b5e4-8c68f2ad1311" />
+## Screenshots
 
-
+<img width="394" height="456" alt="Timer" src="https://github.com/user-attachments/assets/1d507916-5fd1-496e-9d1f-eaf3068e252b" />
+<img width="391" height="454" alt="Chick states" src="https://github.com/user-attachments/assets/d70442d8-ffa7-433d-9757-059b4ab026a6" />
+<img width="396" height="455" alt="Stats" src="https://github.com/user-attachments/assets/8d172157-b75c-4185-ba41-fee669ac7766" />
+<img width="394" height="373" alt="Settings" src="https://github.com/user-attachments/assets/cc82a971-391c-42fc-ac49-8bf7e5e667f1" />
 
 ## Development
 
