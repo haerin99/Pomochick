@@ -18,12 +18,12 @@ Go to the [Releases](https://github.com/haerin99/Pomochick/releases) page to dow
   - 3 states: happy, neutral, sad
   - Completing a pomodoro feeds the chick
   - Hunger increases daily ("POMOS/SESSION" * "HUNGER -/POMO" * "SESSIONS/DAY" / 2)
-  - When hunger reaches 100, the chick will die
+  - When hunger reaches 100, the chick will die. (You can prevent this with "PAUSE HUNGER" in settings, or restart with "RESET CHICK").
 - Minimal and cute UI
 - Stats
 - Settings
   - Pomodoro and break lengths
-  - Pause hunger (stops it from increasing)
+  - Pause hunger (stops the daily increase)
   - Reset chick status & stats
 
 <img width="394" height="456" alt="Screenshot 2026-06-01 at 12 41 05 AM" src="https://github.com/user-attachments/assets/1d507916-5fd1-496e-9d1f-eaf3068e252b" />
