@@ -23,8 +23,7 @@ Go to the [Releases](https://github.com/haerin99/Pomochick/releases) page to dow
 - Hunger increases daily based on your goals:
   $$\frac{HUNGER/POMO \times POMOS/SESSION \times SESSIONS/DAY}{2}$$
   Complete at least half your planned sessions each day to keep the chick fed
-- When hunger reaches 100, the chick dies — use **Pause Hunger** to prevent this, or **Reset Chick** to start over
-<img src="assets/dead_chick.png" width="60">
+- When hunger reaches 100, the chick dies — use **Pause Hunger** to prevent this, or **Reset Chick** to start over <img src="assets/dead_chick.png" width="60">
 
 ### 📊 Stats
 - Days alive, total focus time, and weekly activity
